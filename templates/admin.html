@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <div class="dashboard-header">
+
+        <h1>Admin Dashboard</h1>
+
+        <p>
+            Manage bookings,
+            users and services.
+        </p>
+
+    </div>
+
+    <div class="dashboard-stats">
+
+        <div class="dash-card">
+
+            <i class="fas fa-users"></i>
+
+            <h2>{{ users|length }}</h2>
+
+            <p>Total Users</p>
+
+        </div>
+
+        <div class="dash-card">
+
+            <i class="fas fa-calendar-check"></i>
+
+            <h2>{{ bookings|length }}</h2>
+
+            <p>Total Bookings</p>
+
+        </div>
+
+        <div class="dash-card">
+
+            <i class="fas fa-money-bill-wave"></i>
+
+            <h2>₹50K+</h2>
+
+            <p>Total Revenue</p>
+
+        </div>
+
+    </div>
+
+    <div class="table-section">
+
+        <h2>Recent Bookings</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Service</th>
+
+                <th>Date</th>
+
+            </tr>
+
+            {% for booking in bookings %}
+
+            <tr>
+
+                <td>{{ booking.name }}</td>
+
+                <td>{{ booking.service }}</td>
+
+                <td>{{ booking.date }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</section>
+
+{% endblock %}

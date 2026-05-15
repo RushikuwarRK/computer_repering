@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <div class="booking-left">
+
+            <span class="tag">
+                SERVICE BOOKING
+            </span>
+
+            <h1>Book Your Service</h1>
+
+            <p>
+                Schedule computer repair,
+                CCTV installation,
+                website development,
+                server setup and more.
+            </p>
+
+        </div>
+
+        <div class="booking-right">
+
+            <form method="POST" class="booking-form">
+
+                <input type="text" name="name" placeholder="Full Name" required>
+
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <input type="text" name="phone" placeholder="Phone Number" required>
+
+                <select name="service">
+
+                    <option>Computer Repair</option>
+
+                    <option>CCTV Installation</option>
+
+                    <option>Server Setup</option>
+
+                    <option>Website Development</option>
+
+                    <option>PC Upgrade</option>
+
+                </select>
+
+                <input type="date" name="date">
+
+                <textarea name="message" rows="5" placeholder="Write Your Requirement"></textarea>
+
+                <button type="submit">
+                    Submit Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
